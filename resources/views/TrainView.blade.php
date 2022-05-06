@@ -7,6 +7,8 @@
     <title>laravel-migration-seeder</title>
 </head>
 <body>
-    Hello!
+    @foreach ($trains as $train)
+        <p>{{ $train->nome_azienda}}</p>
+    @endforeach
 </body>
 </html>

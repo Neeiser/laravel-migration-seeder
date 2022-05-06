@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Train;
 use Faker\Generator as Faker;
 
+
 class TrainSeeder extends Seeder
 {
     /**
@@ -15,9 +16,9 @@ class TrainSeeder extends Seeder
     {
         for ($i=0; $i < 50; $i++) { 
             $trainData = [
-                'nome_azienda'          => $faker-> words(1, true),
-                'stazione_di_partenza'  => $faker-> words(1, true),
-                'stazione_di_arrivo'    => $faker-> words(1, true),
+                'nome_azienda'          => $faker-> company(),
+                'stazione_di_partenza'  => $faker-> country(),
+                'stazione_di_arrivo'    => $faker-> country(),
                 'orario_di_partenza'    => $faker-> time('H:i'),
                 'orario_di_arrivo'      => $faker-> time('H:i'),
                 'codice_treno'          => $faker-> randomNumber(5, true),
