@@ -7,6 +7,6 @@
     <title>laravel-migration-seeder</title>
 </head>
 <body>
-    
+     
 </body>
 </html>
