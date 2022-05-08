@@ -42,11 +42,19 @@
                 </div>
                 <div class="train-category">
                     <strong>In orario</strong>
-                    <span>{{ $train->in_orario }}</span>
+                    @if ($train->in_orario == '1')
+                        <span>Si</span>
+                    @else {{-- ($train->in_orario == '0') --}}
+                        <span>No</span>
+                    @endif
                 </div>
                 <div class="train-category">
                     <strong>Cancellato</strong>
-                    <span>{{ $train->cancellato }}</span>
+                    @if ($train->cancellato == '1')
+                        <span>Si</span>
+                    @else   {{-- ($train->cancellato == '0') --}}
+                        <span>No</span>
+                    @endif
                 </div>
             </div>
             @endforeach
